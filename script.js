@@ -7,29 +7,19 @@
 
 let playerName = "";
 
-
-
-/* ==========================
-   FIXED NAME SYSTEM
-========================== */
-
-
-let playerName = "";
-
 let gameRunning = false;
-
 
 
 function checkName(){
 
+    let input = document
+    .getElementById("playerName")
+    .value
+    .trim();
 
-    let input =
-    document.getElementById("playerName").value.trim();
 
-
-    let error =
-    document.getElementById("error");
-
+    let error = document
+    .getElementById("error");
 
 
     if(input === "Akram"){
@@ -38,14 +28,19 @@ function checkName(){
         playerName = input;
 
 
-        document.getElementById("startScreen").style.display = "none";
+        // Hide name screen
+        document
+        .getElementById("startScreen")
+        .style.display = "none";
 
 
-        document.getElementById("gameScreen").style.display = "block";
+        // Show game screen
+        document
+        .getElementById("gameScreen")
+        .style.display = "block";
 
 
         startGame();
-
 
 
     }
@@ -62,23 +57,14 @@ function checkName(){
 }
 
 
-function startGame(){
 
+function startGame(){
 
     gameRunning = true;
 
-
-    playerRunning = true;
-
-
-    gameLoop();
-
-
     console.log(
-        "Game Started for "
-        + playerName
+        "Game started for " + playerName
     );
-
 
 }
 /* ==========================
